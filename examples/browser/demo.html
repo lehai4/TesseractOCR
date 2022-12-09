@@ -49,7 +49,7 @@
 		progressUpdate({ status: 'done', data });
 	}
 </script>
-<select id="langsel" onchange="window.lastFile && recognizeFile(window.lastFile)">
+<select id="langsel" class="option" onchange="window.lastFile && recognizeFile(window.lastFile)">
 	<option value='afr'> Afrikaans </option>
 	<option value='ara'> Arabic </option>
 	<option value='aze'> Azerbaijani </option>
@@ -127,6 +127,7 @@
 		color: #313131;
 		border-top: 1px solid #dadada;
 		padding: 9px;
+		font-size: 18px;
 		display: flex;
 	}
 
@@ -137,8 +138,6 @@
 	.status {
 		min-width: 250px;
 	}
-
-
 
 	#log>div:nth-child(3) {
 		display: none;
@@ -178,6 +177,14 @@
 	body {
 		font-family: sans-serif;
 		margin: 30px;
+	}
+
+	.option {
+		font-size: 16px;
+	}
+
+	input[type="file"] {
+		font-size: 14px;
 	}
 
 	progress {
